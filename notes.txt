@@ -1,0 +1,19 @@
+Xtern Class of 2020 Data Science -- Truman Brubaker
+
+I added several columns for the data, dist_from_bus, dist_from_new_bus, dist_from_last, charge_time,
+time_from_bus and time_from_new_bus.
+dist_from_bus: Column that contains the distance from the point 20.19, 20.19.
+dist_from_new_bus: Column that contains the distance from the optimal bus location (0.355608222011024,
+ 0.231251456934552), or zero, depending on if the scooter needs to be charged or not.
+charge_time: Amount of time the scooter would need to charge (5-power_level)
+time_from_bus: Amount of time for the bus to get from 20.19, 20.19, to scooter's current location
+time_from_new_bus: Amount of time for the bus to get from the optimal bus location to the scooter, or zero
+if the scooter is at full charge
+dist_from_last: distance from the previous scooter's row. Optimization of the sum of these would minimize
+travel time to every scooter location. Removing fully charged scooters might be good.
+
+total_charge_time: 64271 hours, or, assuming you can always charge 50 scooters at a time, and you always
+have 50 non-fully charged scooters, 1285.42 hours.
+
+Bus location X, Bus location Y: Optimal locations for new place for charging bus to park, with least
+total proximity from example dataset scooters.
